@@ -1,0 +1,92 @@
+#include<iostream>
+using namespace std;
+
+void avail();
+void install();
+void reserve();
+void show();
+
+static int i=0;
+class instal
+{
+	public: 
+	char driver[10];
+	char arival[40];
+	char depar[40];
+	char from[20];
+	char to[20];
+	int x;
+};
+
+
+
+//class reservation()
+
+//{
+	
+//};
+
+int main()
+{
+	int bus[10] , choice;
+	while(0<1)
+	{
+		cout<<"\n\n\n\n\n\t\t1.Available Bus Number\n\t\t2.Install\n\t\t3.Reservation\n\t\t4.Show\n\t\t5.Exit\n\n\t\tEBTER YOUR CHOICE--> ";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				avail();
+				break;
+			case 2:
+				install();
+				break;
+			case 3:
+				reserve();
+				break;
+			case 4:
+				//show();
+				break;
+			case 5:
+				exit(0);
+				break;
+			default:
+				cout<<"Invalid Choice";
+		}
+	}
+}
+
+void avail()
+{
+	cout<<"\n\n\n\n\t\tTotal buses available are ten from number 1 to 10.";
+}
+
+void install()
+{
+		i++;
+	int bn;
+	cout<<"\n\n\nEnter Bus Number: ";
+	cin>>bn;
+	instal bus[bn-1];
+	cout<<"\n\nEnter Drivr's name : ";
+	cin>>bus[bn-1].driver;
+	cout<<"\n\nArival Time: ";
+	cin>>bus[bn-1].arival;
+	cout<<"\n\nDeparture time : ";
+	cin>>bus[bn-1].depar;
+	cout<<"\n\nFrom :\t\t ";
+	cin>>bus[bn-1].from;
+	cout<<"\n\nTo :\t\t ";
+	cin>>bus[bn-1].to;
+	bus[bn-1].x==1;
+
+}
+
+void reserve()
+{
+	int user;
+	cout<<"Enter the Bus Number : ";
+	instal bus[user-1];
+	if(bus[user-1].x==1)
+		cout<<"good";
+}
